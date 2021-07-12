@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include("./connection.php");
+include("./databaseconnection.php");
 if(isset($_REQUEST['login'])){
 $username=$_REQUEST['username'];
 $pwd=$_REQUEST['pwd'];

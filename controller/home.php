@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include("databaseconnection.php");
+include("controller/databaseconnection.php");
 $username=$_SESSION['username'];
 if($_REQUEST['activity']=='logout'){
 $username=null;
@@ -118,5 +118,5 @@ if(empty($username))
         
                                     $query = mysql_query("SELECT bookId,title,author,price,publisher From books Where bookId = '$uBookId'");
                                     $result = mysql_fetch_assoc($query);
-
+                                }
                                     ?>
